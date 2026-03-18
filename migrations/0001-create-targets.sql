@@ -6,7 +6,7 @@ create table if not exists target (
 create table if not exists target_position (
     id integer primary key autoincrement,
     timestamp datetime default current_timestamp,
-    target_id integer references target(id),
+    target_id integer references target(target_id),
     target_distance float,
     target_bearing float,
     target_bearing_unit text,
